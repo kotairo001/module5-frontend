@@ -1,6 +1,5 @@
 import {NgModule} from '@angular/core';
 import {BrowserModule} from '@angular/platform-browser';
-
 import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
@@ -15,7 +14,6 @@ import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {MatButtonModule} from "@angular/material/button";
 import {HTTP_INTERCEPTORS, HttpClientModule} from "@angular/common/http";
 import {LoginComponent} from './form-login/login/login.component';
-
 import {environment} from "../environments/environment.development";
 import {UploadAvatarComponent} from './upload/upload-avatar/upload-avatar.component';
 import {MatProgressSpinnerModule} from "@angular/material/progress-spinner";
@@ -38,17 +36,16 @@ import {PageCategoryComponent} from './content/category/page-category/page-categ
 import {ListDiaryComponent} from './content/diary/list-diary/list-diary.component';
 import {CreateDiaryComponent} from './content/diary/create-diary/create-diary.component';
 import {MatSelectModule} from "@angular/material/select";
-import { UpdateDiaryComponent } from './content/diary/update-diary/update-diary.component';
-import { DiaryDetailComponent } from './content/diary/diary-detail/diary-detail.component';
-import { DiaryUpdateComponent } from './content/diary/diary-update/diary-update.component';
-import { DiaryDeleteComponent } from './content/diary/diary-delete/diary-delete.component';
+import {UpdateDiaryComponent} from './content/diary/update-diary/update-diary.component';
+import {DiaryDetailComponent} from './content/diary/diary-detail/diary-detail.component';
+import {DiaryUpdateComponent} from './content/diary/diary-update/diary-update.component';
+import {DiaryDeleteComponent} from './content/diary/diary-delete/diary-delete.component';
 import {DiaryGuardService} from "../diary-guard";
-import { UserDetailComponent } from './user-detail/user-detail.component';
+import {UserDetailComponent} from './user-detail/user-detail.component';
 import {MatMenuModule} from "@angular/material/menu";
-import { AdminPageComponent } from './admin-page/admin-page.component';
-import { UserManagementComponent } from './content/user-management/user-management.component';
+import {AdminPageComponent} from './admin-page/admin-page.component';
+import {UserManagementComponent} from './content/user-management/user-management.component';
 import {AdminGuardService} from "./app-guard";
-
 
 @NgModule({
   declarations: [

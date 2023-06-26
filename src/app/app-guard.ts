@@ -9,15 +9,20 @@ export class AdminGuardService implements CanActivate {
 
   canActivate(route: ActivatedRouteSnapshot,
               state: RouterStateSnapshot): boolean | UrlTree {
-    if (this.tokenService.getToken() &&
-      JSON.stringify(this.tokenService.getRole()) != JSON.stringify(["ADMIN"])) {
-      alert('You are not allowed to view this page. You are redirected to Login Page');
+
+    if (!this.tokenService.getToken()) {
+      console.log('You are not allowed to view this page. You are redirected to Login Page.');
+      this.router.navigate(["login"], {queryParams: {retUrl: route.url}});
+      return false;
+    }
+
+    if (JSON.stringify(this.tokenService.getRole()) != JSON.stringify(["ADMIN"])) {
+      console.log('You are not allowed to view this page. You are redirected to Login Page.');
       this.router.navigateByUrl("/");
       return true;
     }
-    
-    alert('You are not allowed to view this page. You are redirected to Login Page');
-    this.router.navigate(["login"], {queryParams: {retUrl: route.url}});
-    return false;
+
+    console.log('You are access to view this page success.');
+    return true;
   }
 }
