@@ -21,7 +21,7 @@
           <mat-form-field style="width: 100%">
             <mat-label>Select category</mat-label>
             <mat-select #category="ngModel" [(ngModel)]="form.listCategory" multiple name="category" required>
-              <mat-option *ngFor="let ct of listCategory" [value]="category">{{ct.name}}</mat-option>
+              <mat-option *ngFor="let ct of listCategory" [value]="ct">{{ct.name}}</mat-option>
             </mat-select>
             <mat-error *ngIf="category.hasError('required')">Please choose the category!</mat-error>
           </mat-form-field>

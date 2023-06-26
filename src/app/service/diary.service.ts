@@ -14,9 +14,7 @@ export class DiaryService {
   constructor(private httpClient: HttpClient) {
   }
 
-  createDiary(diary: Diary): Observable<any> {
-    console.log(diary);
-    console.log(this.httpClient.post<any>(this.API_DIARY, diary));
+  createDiaryService(diary: Diary): Observable<any> {
     return this.httpClient.post<any>(this.API_DIARY, diary)
   }
 

@@ -10,7 +10,6 @@ import {HttpClient} from "@angular/common/http";
 export class CategoryService {
   private API_CATEGORY = environment.API_LOCAL + 'category'
 
-
   constructor(private httpClient: HttpClient) {
   }
 
@@ -19,7 +18,6 @@ export class CategoryService {
   }
 
   getListCategory(): Observable<any> {
-    console.log(this.httpClient.get<any>(this.API_CATEGORY));
     return this.httpClient.get<any>(this.API_CATEGORY)
   }
 

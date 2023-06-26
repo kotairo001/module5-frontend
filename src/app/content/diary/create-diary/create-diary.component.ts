@@ -40,16 +40,13 @@ export class CreateDiaryComponent implements OnInit {
     if (this.form.avatar == undefined) {
       this.status = "Avatar is required! Please choose upload avatar"
     } else {
-      // console.log(this.diaryService.createDiary(this.diary));
-      this.diaryService.createDiary(this.diary).subscribe(data => {
-        console.log(data);
+      this.diaryService.createDiaryService(this.diary).subscribe(data => {
+        console.log("data --->", data)
+        if (data.message=="create_success") {
+          this.status = "Add success"
+          this.router.navigateByUrl('/diary/all/' + this.userId)
+        }
       })
-      // .subscribe(data=>{
-      // console.log(data)
-      // if (data.message=="create_success") {
-      //   this.status = "Add success"
-      //   this.router.navigateByUrl('/diary/all/' + this.userId)
-      // }
     }
   }
 
