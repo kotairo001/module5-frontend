@@ -1,6 +1,5 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
-
-import { DadInputComponent } from './dad-input.component';
+import {ComponentFixture, TestBed} from '@angular/core/testing';
+import {DadInputComponent} from './dad-input.component';
 
 describe('DadInputComponent', () => {
   let component: DadInputComponent;

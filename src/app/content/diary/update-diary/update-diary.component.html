@@ -18,13 +18,13 @@
             <input #description="ngModel" [(ngModel)]="form.description" name="description" required matInput>
             <mat-error *ngIf="description.hasError('required')">The description is required!</mat-error>
           </mat-form-field>
-<!--          <mat-form-field style="width: 100%">-->
-<!--            <mat-label>Select category</mat-label>-->
-<!--            <mat-select #category="ngModel" [(ngModel)]="form.listCategory" multiple name="category" required>-->
-<!--              <mat-option *ngFor="let category of listCategory" [value]="category">{{category.name}}</mat-option>-->
-<!--            </mat-select>-->
-<!--            <mat-error *ngIf="category.hasError('required')">Please select category!</mat-error>-->
-<!--          </mat-form-field>-->
+          <!--          <mat-form-field style="width: 100%">-->
+          <!--            <mat-label>Select category</mat-label>-->
+          <!--            <mat-select #category="ngModel" [(ngModel)]="form.listCategory" multiple name="category" required>-->
+          <!--              <mat-option *ngFor="let category of listCategory" [value]="category">{{category.name}}</mat-option>-->
+          <!--            </mat-select>-->
+          <!--            <mat-error *ngIf="category.hasError('required')">Please select category!</mat-error>-->
+          <!--          </mat-form-field>-->
           <mat-form-field style="width: 100%; height: 200px">
             <mat-label>Detail</mat-label>
             <textarea #detail="ngModel" [(ngModel)]="form.detail" name="detail" required matInput></textarea>

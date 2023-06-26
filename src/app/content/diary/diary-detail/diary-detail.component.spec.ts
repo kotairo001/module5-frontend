@@ -1,6 +1,5 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
-
-import { DiaryDetailComponent } from './diary-detail.component';
+import {ComponentFixture, TestBed} from '@angular/core/testing';
+import {DiaryDetailComponent} from './diary-detail.component';
 
 describe('DiaryDetailComponent', () => {
   let component: DiaryDetailComponent;

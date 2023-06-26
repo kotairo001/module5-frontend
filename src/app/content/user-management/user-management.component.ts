@@ -16,7 +16,7 @@ import {Diary} from "../../model/Diary";
 })
 export class UserManagementComponent {
   dataSource: any;
-  displayedColumns: string[] = ['id', 'username', 'name',"avatar"];
+  displayedColumns: string[] = ['id', 'username', 'name', "avatar"];
   listUser: User[] = [];
   listDiary: Diary[] = [];
   checkUserLogin = false;
@@ -40,7 +40,6 @@ export class UserManagementComponent {
       console.log("list user --->", data)
       this.dataSource.paginator = this.paginator;
     })
-
 
 
   }

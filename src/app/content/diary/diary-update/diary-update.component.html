@@ -15,7 +15,8 @@
           </mat-form-field>
           <mat-form-field style="width: 100%">
             <mat-label>Description</mat-label>
-            <input #description="ngModel" [(ngModel)]="diary.description" name="description" required matInput value="{{diary.description}}">
+            <input #description="ngModel" [(ngModel)]="diary.description" name="description" required matInput
+                   value="{{diary.description}}">
             <mat-error *ngIf="description.hasError('required')">The description is required!</mat-error>
           </mat-form-field>
           <!--          <mat-form-field style="width: 100%">-->
@@ -27,7 +28,8 @@
           <!--          </mat-form-field>-->
           <mat-form-field style="width: 100%; height: 200px">
             <mat-label>Detail</mat-label>
-            <textarea #detail="ngModel" [(ngModel)]="diary.detail" name="detail" required matInput value="{{diary.detail}}"></textarea>
+            <textarea #detail="ngModel" [(ngModel)]="diary.detail" name="detail" required matInput
+                      value="{{diary.detail}}"></textarea>
             <mat-error *ngIf="detail.hasError('required')">The detail is required!</mat-error>
           </mat-form-field>
           <app-upload-avatar (giveURLtoCreate)="onUpload($event)"></app-upload-avatar>

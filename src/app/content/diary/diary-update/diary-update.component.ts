@@ -21,7 +21,6 @@ export class DiaryUpdateComponent implements OnInit {
               private router: Router,
               private actRouter: ActivatedRoute,
               public tokenService: TokenService,
-
   ) {
   }
 

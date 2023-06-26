@@ -10,29 +10,37 @@ import {Diary} from "../model/Diary";
 })
 export class DiaryService {
   private API_DIARY = environment.API_LOCAL + "diary"
+
   constructor(private httpClient: HttpClient) {
   }
-  createDiary (diary: Diary): Observable<any>{
+
+  createDiary(diary: Diary): Observable<any> {
     console.log(diary);
-    console.log(this.httpClient.post<any>(this.API_DIARY,diary));
-    return this.httpClient.post<any>(this.API_DIARY,diary)
+    console.log(this.httpClient.post<any>(this.API_DIARY, diary));
+    return this.httpClient.post<any>(this.API_DIARY, diary)
   }
-  getListDiary(id: number):Observable<any>{
+
+  getListDiary(id: number): Observable<any> {
     return this.httpClient.get<any>(this.API_DIARY + "/all/" + id)
   }
-  getDiaryById(id: number):Observable<any>{
+
+  getDiaryById(id: number): Observable<any> {
     return this.httpClient.get<any>(this.API_DIARY + "/" + id);
   }
-  getCategory(id:number):Observable<any>{
+
+  getCategory(id: number): Observable<any> {
     return this.httpClient.get<any>(this.API_DIARY + "/list/" + id)
   }
-  updateDiary (id:number, diary: Diary): Observable<any> {
+
+  updateDiary(id: number, diary: Diary): Observable<any> {
     return this.httpClient.put<any>(this.API_DIARY + "/" + id, diary);
   }
+
   deleteDiary(id: number): Observable<any> {
     return this.httpClient.delete<any>(this.API_DIARY + "/" + id)
   }
-  getDiaryNumber():Observable<any>{
+
+  getDiaryNumber(): Observable<any> {
     return this.httpClient.get<any>(this.API_DIARY + "/count")
   }
 }

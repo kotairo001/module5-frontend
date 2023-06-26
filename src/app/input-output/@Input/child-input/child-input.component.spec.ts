@@ -1,6 +1,5 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
-
-import { ChildInputComponent } from './child-input.component';
+import {ComponentFixture, TestBed} from '@angular/core/testing';
+import {ChildInputComponent} from './child-input.component';
 
 describe('ChildInputComponent', () => {
   let component: ChildInputComponent;

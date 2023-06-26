@@ -1,6 +1,5 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
-
-import { ChangeAvatarComponent } from './change-avatar.component';
+import {ComponentFixture, TestBed} from '@angular/core/testing';
+import {ChangeAvatarComponent} from './change-avatar.component';
 
 describe('ChangeAvatarComponent', () => {
   let component: ChangeAvatarComponent;

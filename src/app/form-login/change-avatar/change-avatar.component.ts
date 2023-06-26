@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 import {ChangeAvatar} from "../../model/ChangeAvatar";
 import {AuthService} from "../../service/auth.service";
 import {TokenService} from "../../service/token.service";
@@ -9,19 +9,21 @@ import {TokenService} from "../../service/token.service";
   styleUrls: ['./change-avatar.component.css']
 })
 export class ChangeAvatarComponent {
-form: any = {}
+  form: any = {}
   changeAvatar?: ChangeAvatar;
-status = 'Update Your Avatar!'
-constructor(private authService: AuthService,
-            private tokenService: TokenService) {
-}
+  status = 'Update Your Avatar!'
+
+  constructor(private authService: AuthService,
+              private tokenService: TokenService) {
+  }
+
   updateAvatar() {
     this.changeAvatar = new ChangeAvatar(
       this.form.avatar
     )
-    this.authService.editAvatar(this.changeAvatar).subscribe(data =>{
-      console.log('data -->',data)
-      if(data.message == 'no'){
+    this.authService.editAvatar(this.changeAvatar).subscribe(data => {
+      console.log('data -->', data)
+      if (data.message == 'no') {
         this.status = 'Update Failed! Please choose upload file!'
       } else {
         this.tokenService.setAvatar(this.form.avatar);

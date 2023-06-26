@@ -19,7 +19,6 @@ export class CreateCategoryComponent {
   }
 
 
-
   createCategory() {
     this.category = new Category(this.form.name)
 

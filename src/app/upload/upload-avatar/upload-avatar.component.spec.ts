@@ -1,6 +1,5 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
-
-import { UploadAvatarComponent } from './upload-avatar.component';
+import {ComponentFixture, TestBed} from '@angular/core/testing';
+import {UploadAvatarComponent} from './upload-avatar.component';
 
 describe('UploadAvatarComponent', () => {
   let component: UploadAvatarComponent;

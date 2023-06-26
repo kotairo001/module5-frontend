@@ -32,7 +32,7 @@ export class NavBarComponent implements OnInit {
       this.name = this.tokenService.getName();
       this.avatar = this.tokenService.getAvatar();
       this.checkLogin = true;
-      if(JSON.stringify(this.tokenService.getRole()) == JSON.stringify(["ADMIN"])) {
+      if (JSON.stringify(this.tokenService.getRole()) == JSON.stringify(["ADMIN"])) {
         this.checkAdmin = true
       }
     }
@@ -47,7 +47,6 @@ export class NavBarComponent implements OnInit {
     const dialogRef = this.dialog.open(UserDetailComponent, {restoreFocus: false});
     dialogRef.afterClosed().subscribe(() => this.menuTrigger.focus());
   }
-
 
 
 }

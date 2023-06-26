@@ -9,17 +9,19 @@ import {Diary} from "../../../model/Diary";
   styleUrls: ['./diary-detail.component.css']
 })
 
-export class DiaryDetailComponent implements OnInit{
+export class DiaryDetailComponent implements OnInit {
   // @ts-ignore
   diary = new Diary();
+
   constructor(private diaryService: DiaryService,
               private actRouter: ActivatedRoute) {
   }
+
   ngOnInit(): void {
     this.actRouter.paramMap.subscribe(diaryID => {
       // @ts-ignore
-      const id = + diaryID.get("id");
-      this.diaryService.getDiaryById(id).subscribe(data=>{
+      const id = +diaryID.get("id");
+      this.diaryService.getDiaryById(id).subscribe(data => {
         this.diary = data;
         console.log(this.diary)
       })

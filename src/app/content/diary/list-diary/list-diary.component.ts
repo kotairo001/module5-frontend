@@ -13,10 +13,11 @@ import {DiaryDeleteComponent} from "../diary-delete/diary-delete.component";
   templateUrl: './list-diary.component.html',
   styleUrls: ['./list-diary.component.css'],
 })
-export class ListDiaryComponent implements OnInit{
+export class ListDiaryComponent implements OnInit {
   checkUserLogin = false;
   checkListDiary = false;
   @ViewChild(MatPaginator) paginator?: MatPaginator;
+
   constructor(
     public dialog: MatDialog,
     private tokenService: TokenService,
@@ -24,32 +25,36 @@ export class ListDiaryComponent implements OnInit{
     private router: Router
   ) {
   }
-  listDiary:Diary[] = [];
+
+  listDiary: Diary[] = [];
   form: any;
   listCategory?: Category[];
+
   ngOnInit(): void {
-    if(this.tokenService.getToken()){
+    if (this.tokenService.getToken()) {
       this.checkUserLogin = true;
     }
-    this.diaryService.getListDiary(this.tokenService.getId()).subscribe(data=>{
+    this.diaryService.getListDiary(this.tokenService.getId()).subscribe(data => {
       this.listDiary = data;
       for (let i = 0; i < this.listDiary.length; i++) {
         // @ts-ignore
-        this.diaryService.getCategory(this.listDiary[i].id).subscribe(data_category=>{
+        this.diaryService.getCategory(this.listDiary[i].id).subscribe(data_category => {
           this.listCategory = data_category;
           console.log(this.listCategory)
         });
       }
-      if(this.listDiary.length==0){
+      if (this.listDiary.length == 0) {
         this.checkListDiary = true;
       }
-    })}
+    })
+  }
+
   openDialogDelete(id: any) {
     const dialogRef = this.dialog.open(DiaryDeleteComponent);
     dialogRef.afterClosed().subscribe(result => {
-      if(result){
-        this.diaryService.deleteDiary(id).subscribe(()=>{
-          this.diaryService.getListDiary(this.tokenService.getId()).subscribe(data =>{
+      if (result) {
+        this.diaryService.deleteDiary(id).subscribe(() => {
+          this.diaryService.getListDiary(this.tokenService.getId()).subscribe(data => {
             this.listCategory = data
             window.location.reload();
           })
@@ -61,6 +66,7 @@ export class ListDiaryComponent implements OnInit{
   createDiary() {
     this.router.navigateByUrl('/create-diary')
   }
+
   updateDiary() {
     this.router.navigateByUrl('/update-diary/:id')
   }

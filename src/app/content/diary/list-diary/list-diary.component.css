@@ -1,4 +1,5 @@
 @import url(//fonts.googleapis.com/css?family=Lato:300:400);
+
 * {
   margin: 0;
   padding: 0;
@@ -108,6 +109,7 @@ body {
 .container .example-card .content a:hover {
   opacity: 0.8;
 }
+
 .container a {
   text-decoration: none;
   background-color: transparent;
@@ -146,9 +148,9 @@ body {
   transition: all 0.3s ease;
   position: relative;
   display: inline-block;
-  box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
-  7px 7px 20px 0px rgba(0,0,0,.1),
-  4px 4px 5px 0px rgba(0,0,0,.1);
+  box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, .5),
+  7px 7px 20px 0px rgba(0, 0, 0, .1),
+  4px 4px 5px 0px rgba(0, 0, 0, .1);
   outline: none;
 }
 
@@ -158,71 +160,77 @@ body {
   line-height: 42px;
   padding: 0;
   border: none;
-  background: rgb(247,150,192);
-  background: radial-gradient(circle, rgba(247,150,192,1) 0%, rgba(118,174,241,1) 100%);
+  background: rgb(247, 150, 192);
+  background: radial-gradient(circle, rgba(247, 150, 192, 1) 0%, rgba(118, 174, 241, 1) 100%);
 
 }
+
 .btn-5:hover {
   color: #f0094a;
   background: transparent;
-  box-shadow:none;
+  box-shadow: none;
 }
+
 .btn-5:before,
-.btn-5:after{
-  content:'';
-  position:absolute;
-  top:0;
-  right:0;
-  height:2px;
-  width:0;
+.btn-5:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 2px;
+  width: 0;
   background: #f0094a;
-  box-shadow:
-    -1px -1px 5px 0px #fff,
-    7px 7px 20px 0px #0003,
-    4px 4px 5px 0px #0002;
-  transition:400ms ease all;
+  box-shadow: -1px -1px 5px 0px #fff,
+  7px 7px 20px 0px #0003,
+  4px 4px 5px 0px #0002;
+  transition: 400ms ease all;
 }
-.btn-5:after{
-  right:inherit;
-  top:inherit;
-  left:0;
-  bottom:0;
+
+.btn-5:after {
+  right: inherit;
+  top: inherit;
+  left: 0;
+  bottom: 0;
 }
+
 .btn-5:hover:before,
-.btn-5:hover:after{
-  width:100%;
-  transition:800ms ease all;
+.btn-5:hover:after {
+  width: 100%;
+  transition: 800ms ease all;
 }
+
 h1 {
   font-family: 'Lato', sans-serif;
-  font-weight:300;
+  font-weight: 300;
   letter-spacing: 2px;
-  font-size:48px;
+  font-size: 48px;
 }
+
 p {
   font-family: 'Lato', sans-serif;
   letter-spacing: 1px;
-  font-size:14px;
+  font-size: 14px;
   color: #333333;
 }
 
 .header {
-  position:relative;
-  text-align:center;
-  background: linear-gradient(60deg, rgba(84,58,183,1) 0%, rgba(0,172,193,1) 100%);
-  color:white;
+  position: relative;
+  text-align: center;
+  background: linear-gradient(60deg, rgba(84, 58, 183, 1) 0%, rgba(0, 172, 193, 1) 100%);
+  color: white;
 }
+
 .logo {
-  width:50px;
-  fill:white;
-  padding-right:15px;
-  display:inline-block;
+  width: 50px;
+  fill: white;
+  padding-right: 15px;
+  display: inline-block;
   vertical-align: middle;
 }
 
 .inner-header {
-  height:15vh;
-  width:100%;
+  height: 15vh;
+  width: 100%;
   margin: 0;
   padding: 0;
 }
@@ -235,61 +243,69 @@ p {
 }
 
 .waves {
-  position:relative;
+  position: relative;
   width: 100%;
-  height:7vh;
-  margin-bottom:-7px; /*Fix for safari gap*/
-  min-height:100px;
-  max-height:150px;
+  height: 7vh;
+  margin-bottom: -7px; /*Fix for safari gap*/
+  min-height: 100px;
+  max-height: 150px;
 }
 
 .content {
-  position:relative;
-  height:5vh;
-  text-align:center;
+  position: relative;
+  height: 5vh;
+  text-align: center;
   background-color: white;
 }
 
 /* Animation */
 
 .parallax > use {
-  animation: move-forever 25s cubic-bezier(.55,.5,.45,.5)     infinite;
+  animation: move-forever 25s cubic-bezier(.55, .5, .45, .5) infinite;
 }
+
 .parallax > use:nth-child(1) {
   animation-delay: -2s;
   animation-duration: 7s;
 }
+
 .parallax > use:nth-child(2) {
   animation-delay: -3s;
   animation-duration: 10s;
 }
+
 .parallax > use:nth-child(3) {
   animation-delay: -4s;
   animation-duration: 13s;
 }
+
 .parallax > use:nth-child(4) {
   animation-delay: -5s;
   animation-duration: 20s;
 }
+
 @keyframes move-forever {
   0% {
-    transform: translate3d(-90px,0,0);
+    transform: translate3d(-90px, 0, 0);
   }
   100% {
-    transform: translate3d(85px,0,0);
+    transform: translate3d(85px, 0, 0);
   }
 }
+
 /*Shrinking for mobile*/
 @media (max-width: 768px) {
   .waves {
-    height:40px;
-    min-height:40px;
+    height: 40px;
+    min-height: 40px;
   }
+
   .content {
-    height:30vh;
+    height: 30vh;
   }
+
   h1 {
-    font-size:24px;
+    font-size: 24px;
   }
 }
 

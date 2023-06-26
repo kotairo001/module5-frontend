@@ -10,6 +10,7 @@ export class UserDetailComponent implements OnInit {
   name = '';
   avatar = '';
   checkLogin = false;
+
   constructor(private tokenService: TokenService) {
   }
 

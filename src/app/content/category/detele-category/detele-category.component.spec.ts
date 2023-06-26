@@ -1,6 +1,5 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
-
-import { DeteleCategoryComponent } from './detele-category.component';
+import {ComponentFixture, TestBed} from '@angular/core/testing';
+import {DeteleCategoryComponent} from './detele-category.component';
 
 describe('DeteleCategoryComponent', () => {
   let component: DeteleCategoryComponent;

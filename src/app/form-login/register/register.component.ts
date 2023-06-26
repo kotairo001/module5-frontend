@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 import {SignUpForm} from "../../model/SignUpForm";
 import {FormControl, Validators} from "@angular/forms";
 import {AuthService} from "../../service/auth.service";
@@ -18,8 +18,9 @@ export class RegisterComponent {
     Validators.email
   ]);
   hide = true;
+
   constructor(private authService: AuthService,
-              private router:Router) {
+              private router: Router) {
   }
 
   ngOnInit(): void {
@@ -33,13 +34,13 @@ export class RegisterComponent {
       this.form.password
     )
     console.log("this signUpForm ---->", this.signUpForm);
-    this.authService.signUp(this.signUpForm).subscribe(data =>{
-      console.log('data ---->',data);
-      if(data.message=='nouser'){
+    this.authService.signUp(this.signUpForm).subscribe(data => {
+      console.log('data ---->', data);
+      if (data.message == 'nouser') {
         this.status = 'The username is existed! Please try again!'
-      } else if(data.message == 'noemail') {
+      } else if (data.message == 'noemail') {
         this.status = 'The email is existed! Please try again!'
-      } else if(data.message == 'yes'){
+      } else if (data.message == 'yes') {
         this.authService.setRegister(true);
         this.router.navigate(["login"])
       }

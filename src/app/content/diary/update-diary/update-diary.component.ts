@@ -22,7 +22,7 @@ export class UpdateDiaryComponent implements OnInit {
     private router: Router,
     private actRouter: ActivatedRoute,
     public tokenService: TokenService,
-    ) {
+  ) {
   }
 
   updateDiary() {
@@ -47,7 +47,7 @@ export class UpdateDiaryComponent implements OnInit {
   ngOnInit(): void {
     this.actRouter.paramMap.subscribe(diaryId => {
       // @ts-ignore
-      const id = + diaryId.get("id");
+      const id = +diaryId.get("id");
       console.log(id)
       this.diaryService.getDiaryById(id).subscribe(data => {
         this.diary = data;

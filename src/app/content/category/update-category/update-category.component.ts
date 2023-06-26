@@ -24,7 +24,7 @@ export class UpdateCategoryComponent implements OnInit {
   updateCategory() {
     // @ts-ignore
     this.categoryService.updateCategory(this.category?.id, this.category).subscribe(data => {
-      if(data.message == "no_change") {
+      if (data.message == "no_change") {
         this.status = "There no change in each field"
       } else if (data.message == "name_existed") {
         this.status = "This category already existed"
