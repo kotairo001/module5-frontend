@@ -1,0 +1,33 @@
+<div class="container">
+
+  <div class="cs-blog-detail">
+    <div class="cs-main-post">
+      <figure><img onload="pagespeed.CriticalImages.checkImageForCriticality(this);" data-pagespeed-url-hash="2714250504" alt="jobline-blog (8)" src="{{diary.avatar}}"></figure>
+    </div>
+    <div class="cs-post-title">
+      <div class="cs-author">
+        <div class="cs-text">
+          <h1>{{diary.title}}</h1>
+        </div>
+      </div>
+      <div class="post-option">
+        <span class="post-date"><a href="http://jobcareer.chimpgroup.com/jobdoor/2015/11/"><i class="cs-color icon-calendar6"></i>{{diary.createDate}}</a></span>
+      </div>
+    </div>
+    <div class="cs-post-option-panel">
+      <div class="rich-editor-text">
+        <p>{{diary.detail}}</p>
+      </div>
+    </div>
+    <div class="cs-tags">
+      <div class="tags">
+        <span>Tags</span>
+        <ul>
+          <li *ngFor="let category of diary.categoryList"><a rel="tag" href="http://jobcareer.chimpgroup.com/jobdoor/tag/college/">{{category.name}}</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+  </div>
+</div>
